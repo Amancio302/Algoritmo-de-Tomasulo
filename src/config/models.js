@@ -52,5 +52,31 @@ export default [
             instruction: instructionsList[9],
             values: ['R1', 'LOOP']
         }
+    ],
+    [
+        {
+            instruction: instructionsList[4],
+            values: ['F6', '0', 'R1']
+        },
+        {
+            instruction: instructionsList[4],
+            values: ['F10', '32', 'R2']
+        },
+        {
+            instruction: instructionsList[0],
+            values: ['F2', 'F4', 'F8']
+        },
+        {
+            instruction: instructionsList[1],
+            values: ['F10', 'F10', 'F2']
+        },
+        {
+            instruction: instructionsList[7],
+            values: ['F2', '-8', 'F6']
+        },
+        {
+            instruction: instructionsList[5],
+            values: ['F4', '64', 'R2']
+        }
     ]
 ]
