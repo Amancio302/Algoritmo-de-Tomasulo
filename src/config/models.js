@@ -46,11 +46,11 @@ export default [
         },
         {
             instruction: instructionsList[10],
-            values: ['R1', '-8', 'F10']
+            values: ['R1', '-8', 'R4']
         },
         {
             instruction: instructionsList[9],
-            values: ['LOOP', 'R1']
+            values: ['R1', 'LOOP']
         }
     ]
 ]
