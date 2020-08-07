@@ -1,29 +1,9 @@
-# tomasulo
+# Algoritmo de Tomasulo
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
+### Execução em ambiente de desenvolvimento
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+O sistema estará acessível em
+localhost:8080
