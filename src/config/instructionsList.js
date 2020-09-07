@@ -1,3 +1,21 @@
+import Instruction from '../model/Instruction'
+import Const from './Const'
+
+const instructionsList = {
+    ADDD: new Instruction(
+        'ADD.D',
+        2,
+        'floatAdd',
+        ['registerFloat', 'registerFloat', 'registerFloat']
+    ),
+    SUBD: new Instruction(
+        'SUB.D',
+        2,
+        'floatAdd',
+        ['registerFloat', 'registerFloat', 'registerFloat']
+    )
+}
+
 export default [
     // 00
     {

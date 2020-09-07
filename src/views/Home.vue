@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <Config/>
+    <Test/>
   </div>
 </template>
 
 <script>
 
-import Config from '@/components/Config.vue'
+import Test from '@/components/Test.vue'
 
 export default {
   name: 'Home',
   components: {
-    Config
+    Test
   }
 }
 </script>
