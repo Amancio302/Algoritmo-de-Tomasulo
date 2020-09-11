@@ -10,6 +10,7 @@ class Instruction {
 
     branchInstruction () {
         for (let param in this.params) {
+            param = this.params[param]
             if (param === Const.params.branch) {
                 return true
             }

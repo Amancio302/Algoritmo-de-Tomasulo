@@ -1,17 +1,17 @@
 <template>
-  <div class="home">
-    <Test/>
-  </div>
+  <v-container class="pa-0" fluid style="background: blue;">
+    <Main />
+  </v-container>
 </template>
 
 <script>
 
-import Test from '@/components/Test.vue'
+import Main from '@/components/Main.vue'
 
 export default {
   name: 'Home',
   components: {
-    Test
+    Main
   }
 }
 </script>

@@ -1,15 +1,15 @@
 export default {
     params: {
-        registerFloat: 0,
-        registerInt: 1,
-        number: 2,
-        branch: 3
+        registerFloat: 'registerFloat',
+        registerInt: 'registerInt',
+        number: 'number',
+        branch: 'branch'
     },
     functionalUnits: {
-        integer: 4,
-        floatAdd: 5,
-        floatMul: 6,
-        load: 7,
-        store: 8
+        integer: 'integerUnit',
+        floatAdd: 'floatAddUnit',
+        floatMul: 'floatMulUnit',
+        load: 'loadUnit',
+        store: 'storeUnit'
     }
 }

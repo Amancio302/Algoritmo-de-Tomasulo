@@ -25,6 +25,10 @@ class RenamedRegister {
             out = mod ? String.fromCharCode(64 + mod) : (--pow, 'Z');
         return pow ? this.toLetters(pow) + out : out;
     }
+
+    available () {
+        return true
+    }
 }
 
 export default RenamedRegister

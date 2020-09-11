@@ -1,5 +1,4 @@
 import Instruction from '../model/Instruction'
-import Const from './Const'
 
 const instructionsList = {
     ADDD: new Instruction(
@@ -13,128 +12,61 @@ const instructionsList = {
         2,
         'floatAdd',
         ['registerFloat', 'registerFloat', 'registerFloat']
+    ),
+    MULTD: new Instruction(
+        'MULT.D',
+        10,
+        'floatMul',
+        ['registerFloat', 'registerFloat', 'registerFloat']
+    ),
+    DIVD: new Instruction(
+        'DIV.D',
+        40,
+        'floatMul',
+        ['registerFloat', 'registerFloat', 'registerFloat']
+    ),
+    LD: new Instruction(
+        'L.D',
+        2,
+        'load',
+        ['registerFloat', 'number', 'registerInt']
+    ),
+    SD: new Instruction(
+        'S.D',
+        1,
+        'store',
+        ['registerFloat', 'number', 'registerInt']
+    ),
+    ADD: new Instruction(
+        'ADD',
+        1,
+        'integer',
+        ['registerInt', 'registerInt', 'registerInt']
+    ),
+    DADDUI: new Instruction(
+        'DADDUI',
+        1,
+        'floatAdd',
+        ['registerFloat', 'registerFloat', 'number']
+    ),
+    ADDI: new Instruction(
+        'ADDI',
+        1,
+        'integer',
+        ['registerInt', 'registerInt', 'number']
+    ),
+    BEQ: new Instruction(
+        'BEQ',
+        1,
+        'integer',
+        ['registerInt', 'registerInt', 'branch']
+    ),
+    BNEZ: new Instruction(
+        'BNEZ',
+        1,
+        'integer',
+        ['registerInt', 'branch']
     )
 }
 
-export default [
-    // 00
-    {
-        name: 'ADD.D',
-        clock: 2,
-        functionalUnit: 'floatAddUnits',
-        params: {
-            one: 'registerFloat',
-            two: 'registerFloat',
-            three: 'registerFloat'
-        }
-    },
-    // 01
-    {
-        name: 'SUBD',
-        clock: 2,
-        functionalUnit: 'floatAddUnits',
-        params: {
-            one: 'registerFloat',
-            two: 'registerFloat',
-            three: 'registerFloat'
-        }
-    },
-    // 02
-    {
-        name: 'MULTD',
-        clock: 10,
-        functionalUnit: 'floatMultUnits',
-        params: {
-            one: 'registerFloat',
-            two: 'registerFloat',
-            three: 'registerFloat'
-        }
-    },
-    // 03
-    {
-        name: 'DIV.D',
-        clock: 40,
-        functionalUnit: 'floatMultUnits',
-        params: {
-            one: 'registerFloat',
-            two: 'registerFloat',
-            three: 'registerFloat'
-        }
-    },
-    // 04
-    {
-        name: 'L.D',
-        clock: 2,
-        functionalUnit: 'loadUnits',
-        params: {
-            one: 'registerFloat',
-            two: 'number',
-            three: 'registerInt'
-        }
-    },
-    // 05
-    {
-        name: 'S.D',
-        clock: 1,
-        functionalUnit: 'storeUnits',
-        params: {
-            one: 'registerFloat',
-            two: 'number',
-            three: 'registerInt'
-        }
-    },
-    // 06
-    {
-        name: 'ADD',
-        clock: 1,
-        functionalUnit: 'integerUnits',
-        params: {
-            one: 'registerInt',
-            two: 'registerInt',
-            three: 'registerInt'
-        }
-    },
-    // 07
-    {
-        name: 'DADDUI',
-        clock: 1,
-        functionalUnit: 'floatAddUnits',
-        params: {
-            one: 'registerFloat',
-            two: 'number',
-            three: 'registerFloat'
-        }
-    },
-    // 08
-    {
-        name: 'BEQ',
-        clock: 1,
-        functionalUnit: 'integerUnits',
-        params: {
-            one: 'registerFloat',
-            two: 'registerFloat',
-            three: 'branch'
-        }
-    },
-    // 09
-    {
-        name: 'BNEZ',
-        clock: 1,
-        functionalUnit: 'integerUnits',
-        params: {
-            one: 'registerInt',
-            two: 'branch'
-        }
-    },
-    // 10
-    {
-        name: 'ADDI',
-        clock: 1,
-        functionalUnit: 'integerUnits',
-        params: {
-            one: 'registerInt',
-            two: 'number',
-            three: 'registerInt'
-        }
-    }
-]
+export default instructionsList

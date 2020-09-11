@@ -14,6 +14,15 @@ export default new Vuex.Store({
         registers: state => state.registers,
         register: state => i => state.registers[i],
         renamedRegisters: state => state.renamedRegisters,
+        hasRegister: state => name => {
+            for (let index in state.registers) {
+                let register = state.registers[index]
+                if (register.name === name) {
+                    return index
+                }
+            }
+            return false
+        },
         hasName: state => name => {
             for (let renamedRegister in state.renamedRegisters) {
                 renamedRegister = state.renamedRegisters[renamedRegister]
@@ -27,6 +36,13 @@ export default new Vuex.Store({
     mutations: {
         increaseClock (state) {
             state.globalClock++
+        },
+        resetClock (state) {
+            state.globalClock = 0
+        },
+        resetRegisters (state) {
+            state.registers = []
+            state.renamedRegisters = []
         },
         addRegister (state, register) {
             state.registers.push(register)
