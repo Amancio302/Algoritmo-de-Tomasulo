@@ -1,17 +1,17 @@
 <template>
-  <div class="home">
-    <Config/>
-  </div>
+  <v-container class="pa-0" fluid style="background: blue;">
+    <Main />
+  </v-container>
 </template>
 
 <script>
 
-import Config from '@/components/Config.vue'
+import Main from '@/components/Main.vue'
 
 export default {
   name: 'Home',
   components: {
-    Config
+    Main
   }
 }
 </script>
